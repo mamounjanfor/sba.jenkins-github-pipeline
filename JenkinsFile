@@ -13,9 +13,9 @@ stages {
 
 	stage('Test') {
 	steps {
-		//sh 'python3 web.py'
+		sh 'python web.py'
 		sh 'python --version'
-		input(id: "Deploy Gate", message: "Deploy ${params.project_name}?", ok: 'Deploy')
+		//input(id: "Deploy Gate", message: "Deploy ${params.project_name}?", ok: 'Deploy')
 	}
 	}
 
